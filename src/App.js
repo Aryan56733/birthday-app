@@ -67,7 +67,7 @@ function App() {
           <Confetti width={window.innerWidth} height={window.innerHeight} recycle={true} />
 
           <div className="card">
-            <h1 className="sparkle">🎉 Happy Birthday 🎉</h1>
+            <h1 className="sparkle">🎉 Happy Birthday Deepa🎉</h1>
             <p className="wishes">
               Wishing you a day filled with love, laughter, and all your favorite things 💖
             </p>
