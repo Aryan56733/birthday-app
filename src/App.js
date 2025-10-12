@@ -180,7 +180,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="sparkle">🎉 Happy Birthday Monika 🎉</h1>
+            <h1 className="sparkle">🎉 Happy Birthday Riya Yadav 🎉</h1>
             <p className="wishes">
               Wishing you a day filled with love, laughter, and all your favorite things 💖
             </p>
