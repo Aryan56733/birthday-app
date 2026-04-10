@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Confetti from "react-confetti";
 import { Fireworks } from "fireworks-js";
 import { motion } from "framer-motion";
-import personPhoto from "./assets/person.jpg";
+import personPhoto from "./assets/person.jpeg";
 import musicFile from "./assets/music.mp3";
 import balloon1 from "./assets/balloon1.png";
 import balloon2 from "./assets/balloon2.png";
@@ -22,10 +22,12 @@ function HeartCanvas() {
 
     const heartPosition = (rad) => [
       Math.pow(Math.sin(rad), 3),
-      -(15 * Math.cos(rad) -
+      -(
+        15 * Math.cos(rad) -
         5 * Math.cos(2 * rad) -
         2 * Math.cos(3 * rad) -
-        Math.cos(4 * rad)),
+        Math.cos(4 * rad)
+      ),
     ];
 
     const scaleAndTranslate = (pos, sx, sy, dx, dy) => [
@@ -85,8 +87,7 @@ function HeartCanvas() {
     const loop = () => {
       const n = -Math.cos(time);
       pulse((1 + n) * 0.5, (1 + n) * 0.5);
-      time +=
-        (Math.sin(time) < 0 ? 9 : n > 0.8 ? 0.2 : 1) * config.timeDelta;
+      time += (Math.sin(time) < 0 ? 9 : n > 0.8 ? 0.2 : 1) * config.timeDelta;
       ctx.fillStyle = "rgba(0,0,0,0.07)"; // lighter fade → keeps trails longer
       ctx.fillRect(0, 0, width, height);
 
@@ -128,7 +129,6 @@ function HeartCanvas() {
 
   return <canvas ref={canvasRef} className="heart-canvas"></canvas>;
 }
-
 
 function App() {
   const [lightsOn, setLightsOn] = useState(false);
@@ -172,7 +172,11 @@ function App() {
         </button>
       ) : (
         <>
-          <Confetti width={window.innerWidth} height={window.innerHeight} recycle={true} />
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            recycle={true}
+          />
 
           <motion.div
             className="card"
@@ -180,11 +184,16 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="sparkle">🎉 A very Happy Birthday Sweta🎉</h1>
+            <h1 className="sparkle">🎉 A Very Happy Birthday Kunnu Singh🎉</h1>
             <p className="wishes">
-              Wishing you a day filled with love, laughter, and all your favorite things 💖
+              Wishing you a day filled with love, laughter, and all your
+              favorite things 💖
             </p>
-            <img src={personPhoto} alt="Birthday Person" className="person-photo" />
+            <img
+              src={personPhoto}
+              alt="Birthday Person"
+              className="person-photo"
+            />
             <br />
             <button className="music-btn" onClick={toggleMusic}>
               {isPlaying ? "⏸ Pause Music" : "▶ Play Music 🎶"}
