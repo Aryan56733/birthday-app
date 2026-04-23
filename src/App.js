@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Confetti from "react-confetti";
 import { Fireworks } from "fireworks-js";
 import { motion } from "framer-motion";
-import personPhoto from "./assets/person.jpeg";
+import personPhoto from "./assets/person.jpg";
 import musicFile from "./assets/music.mp3";
 import balloon1 from "./assets/balloon1.png";
 import balloon2 from "./assets/balloon2.png";
@@ -184,7 +184,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="sparkle">🎉 A Very Happy Birthday Kunnu Singh🎉</h1>
+            <h1 className="sparkle">🎉 A Very Happy Birthday Ritika Verma🎉</h1>
             <p className="wishes">
               Wishing you a day filled with love, laughter, and all your
               favorite things 💖
